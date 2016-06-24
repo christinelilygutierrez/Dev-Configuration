@@ -17,6 +17,7 @@ def appendTimestampToFile(fileName):
     try:
         file = open(fileName, 'a')
         file.write("-- " + fileName + " updated at " + '{:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now()))
+        file.write("\n")
     except:
         print(sys.argv[0] + " error: " + fileName + " could not be opened.")
         exit(-1)
